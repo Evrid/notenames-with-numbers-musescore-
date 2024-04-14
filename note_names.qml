@@ -49,48 +49,51 @@ MuseScore {
             text.fontSize *= fontSizeMini
          if (typeof notes[i].tpc === "undefined") // like for grace notes ?!?
             return
-         switch (notes[i].tpc) {
-            case -1: name = mscoreMajorVersion >= 4 ? qsTr("F♭♭") : qsTranslate("InspectorAmbitus", "F♭♭"); break;
-            case  0: name = mscoreMajorVersion >= 4 ? qsTr("C♭♭") : qsTranslate("InspectorAmbitus", "C♭♭"); break;
-            case  1: name = mscoreMajorVersion >= 4 ? qsTr("G♭♭") : qsTranslate("InspectorAmbitus", "G♭♭"); break;
-            case  2: name = mscoreMajorVersion >= 4 ? qsTr("D♭♭") : qsTranslate("InspectorAmbitus", "D♭♭"); break;
-            case  3: name = mscoreMajorVersion >= 4 ? qsTr("A♭♭") : qsTranslate("InspectorAmbitus", "A♭♭"); break;
-            case  4: name = mscoreMajorVersion >= 4 ? qsTr("E♭♭") : qsTranslate("InspectorAmbitus", "E♭♭"); break;
-            case  5: name = mscoreMajorVersion >= 4 ? qsTr("B♭♭") : qsTranslate("InspectorAmbitus", "B♭♭"); break;
+        
+switch (notes[i].tpc) {
+    case -1: name = qsTranslate("global", "4♭♭"); break;
+    case  0: name = qsTranslate("global", "1♭♭"); break;
+    case  1: name = qsTranslate("global", "5♭♭"); break;
+    case  2: name = qsTranslate("global", "2♭♭"); break;
+    case  3: name = qsTranslate("global", "6♭♭"); break;
+    case  4: name = qsTranslate("global", "3♭♭"); break;
+    case  5: name = qsTranslate("global", "7♭♭"); break;
 
-            case  6: name = mscoreMajorVersion >= 4 ? qsTr("F♭") : qsTranslate("InspectorAmbitus", "F♭"); break;
-            case  7: name = mscoreMajorVersion >= 4 ? qsTr("C♭") : qsTranslate("InspectorAmbitus", "C♭"); break;
-            case  8: name = mscoreMajorVersion >= 4 ? qsTr("G♭") : qsTranslate("InspectorAmbitus", "G♭"); break;
-            case  9: name = qsTranslate(mscoreMajorVersion >= 4 ? "engraving/instruments:db-piccolo traitName" : "InspectorAmbitus", "D♭"); break;
-            case 10: name = qsTranslate(mscoreMajorVersion >= 4 ? "EditPitchBase" : "InspectorAmbitus", "A♭"); break;
-            case 11: name = qsTranslate(mscoreMajorVersion >= 4 ? "EditPitchBase" : "InspectorAmbitus", "E♭"); break;
-            case 12: name = qsTranslate(mscoreMajorVersion >= 4 ? "EditPitchBase" : "InspectorAmbitus", "B♭"); break;
+    case  6: name = qsTranslate("global", "4♭"); break;
+    case  7: name = qsTranslate("global", "1♭"); break;
+    case  8: name = qsTranslate("global", "5♭"); break;
+    case  9: name = qsTranslate("global", "2♭"); break;
+    case 10: name = qsTranslate("global", "6♭"); break;
+    case 11: name = qsTranslate("global", "3♭"); break;
+    case 12: name = qsTranslate("global", "7♭"); break;
 
-            case 13: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "F"); break;
-            case 14: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "C"); break;
-            case 15: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "G"); break;
-            case 16: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "D"); break;
-            case 17: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "A"); break;
-            case 18: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "E"); break;
-            case 19: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "B"); break;
+    case 13: name = qsTranslate("global", "4"); break;
+    case 14: name = qsTranslate("global", "1"); break;
+    case 15: name = qsTranslate("global", "5"); break;
+    case 16: name = qsTranslate("global", "2"); break;
+    case 17: name = qsTranslate("global", "6"); break;
+    case 18: name = qsTranslate("global", "3"); break;
+    case 19: name = qsTranslate("global", "7"); break;
 
-            case 20: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "F♯"); break;
-            case 21: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "C♯"); break;
-            case 22: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "G♯"); break;
-            case 23: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "D♯"); break;
-            case 24: name = qsTranslate(mscoreMajorVersion >= 4 ? "global" : "InspectorAmbitus", "A♯"); break;
-            case 25: name = mscoreMajorVersion >= 4 ? qsTr("E♯") : qsTranslate("InspectorAmbitus", "E♯"); break;
-            case 26: name = mscoreMajorVersion >= 4 ? qsTr("B♯") : qsTranslate("InspectorAmbitus", "B♯"); break;
+    case 20: name = qsTranslate("global", "4♯"); break;
+    case 21: name = qsTranslate("global", "1♯"); break;
+    case 22: name = qsTranslate("global", "5♯"); break;
+    case 23: name = qsTranslate("global", "2♯"); break;
+    case 24: name = qsTranslate("global", "6♯"); break;
+    case 25: name = qsTranslate("global", "3♯"); break;
+    case 26: name = qsTranslate("global", "7♯"); break;
 
-            case 27: name = mscoreMajorVersion >= 4 ? qsTr("F♯♯") : qsTranslate("InspectorAmbitus", "F♯♯"); break;
-            case 28: name = mscoreMajorVersion >= 4 ? qsTr("C♯♯") : qsTranslate("InspectorAmbitus", "C♯♯"); break;
-            case 29: name = mscoreMajorVersion >= 4 ? qsTr("G♯♯") : qsTranslate("InspectorAmbitus", "G♯♯"); break;
-            case 30: name = mscoreMajorVersion >= 4 ? qsTr("D♯♯") : qsTranslate("InspectorAmbitus", "D♯♯"); break;
-            case 31: name = mscoreMajorVersion >= 4 ? qsTr("A♯♯") : qsTranslate("InspectorAmbitus", "A♯♯"); break;
-            case 32: name = mscoreMajorVersion >= 4 ? qsTr("E♯♯") : qsTranslate("InspectorAmbitus", "E♯♯"); break;
-            case 33: name = mscoreMajorVersion >= 4 ? qsTr("B♯♯") : qsTranslate("InspectorAmbitus", "B♯♯"); break;
-            default: name = qsTr("?")   + text.text; break;
-         } // end switch tpc
+    case 27: name = qsTranslate("global", "4♯♯"); break;
+    case 28: name = qsTranslate("global", "1♯♯"); break;
+    case 29: name = qsTranslate("global", "5♯♯"); break;
+    case 30: name = qsTranslate("global", "2♯♯"); break;
+    case 31: name = qsTranslate("global", "6♯♯"); break;
+    case 32: name = qsTranslate("global", "3♯♯"); break;
+    case 33: name = qsTranslate("global", "7♯♯"); break;
+
+    default: name = qsTr("?") + text.text; break;
+} // end switch tpc
+
 
          // octave, middle C being C4
          //oct = (Math.floor(notes[i].pitch / 12) - 1)
