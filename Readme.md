@@ -14,3 +14,6 @@ If you want a separator different from ",", change the corresponding variable in
 To use the plugin, you must first install it according to the [instructions in the Handbook](http://musescore.org/en/handbook/plugins "Handbook").
 
 The idea for this plugin stems from a [discussion in the forum](http://musescore.org/en/node/16786), the microtonal extension from [another discussion in the forum](http://musescore.org/en/node/16870).
+
+New effect:
+![image](https://github.com/Evrid/notenames-with-numbers-musescore-/assets/107913134/c24e0ba0-2592-4cd4-b810-c95bf7d5c93d)
